@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="Excercise 1/index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About me</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Saran</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- slider image -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="langit2.jpg" style="width:100%; height: 350px;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Tokyo</h3>  
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="langit1.jpg" style="width:100%; height: 350px;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Seoul</h3>   
+    </div>
+  </div>
+
+<form class="form-signin" action="https://formspree.io/dhiyaanrn@gmail.com" method="POST">
+  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+  <br>
+  <textarea name="message" id="message" class="form-control" cols="30" rows="10" required placeholder="your message"></textarea>
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+</form>
+<p>&copy; Powered by Formspree  &middot;</p>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
+
+</body>
+</html>
